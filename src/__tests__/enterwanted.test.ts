@@ -28,7 +28,7 @@ test("can enter only required fields and get expected result", async () => {
     await page.enterhair("Gray");
     await page.enteroffense("Robbery")
     await page.enterdow("02202020");
-    // await page.enterdlexpire("07052019");
+    // await page.enterdlexpire("07052019"); <---- this was supposed to be required but causes an error requiring extra inputs*
     await driver.findElement(submitButton).click();
     expect(await page.getResults()).toContain("Not top priority.IBM.MegaMille.Duffy Mcflugel.M.W.510.175.Gray.Robbery.02202020......")
 });
