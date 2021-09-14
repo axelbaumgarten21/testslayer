@@ -1,0 +1,37 @@
+Features To Be Tested in the enter wanted test. (copied over from Jira test case) -- https://dmutah.atlassian.net/browse/AB4DL-33
+
+
+filling out fields required listed in the documentation - enter-wanted
+
+Header: Required, 9-19 characters in length, any allowed
+
+MKE: Required, 2-4 in length, alphabetical or special characters allowed
+
+Originating Agency Identifier: Required, 9 alphanumeric characters in length
+
+Name: Required, 1-30 characters in length, any allowed
+
+Sex: Required, 1 character in length, alphabet only, F (female) M (male) and U (unknown) are the only accepted entries
+
+Race: Required, 1 character in length, alphabet only
+
+Height: Required, 3 characters in length, numeric only in FII format, where F is feet and I is inches
+
+Weight: Required, 1-3 characters in length, numeric only in lbs, leading zeros to be entered systematically as necessary to change the length to 3 characters in the assembled query.
+
+Hair: Required, 3-10 characters in length, alphabetical only
+
+Offense: Required, 5-15 characters in length, any allowed
+
+Date of Warrant/Violation: Required, 8 characters in length, numeric in MMDDYYYY format (allows dates from 1900 to today +1 day, to account for time zone differences)
+
+DL Expiration Date: Required, 8 characters in length, numeric in MMDDYYYY format (allows dates from 1900 to today +1 day, to account for time zone differences)
+
+
+Features Excluded From Testing
+None
+
+Other Supporting Info
+code for automated test is located here: testslayer/src/__tests__ at main · axelbaumgarten21/testslayer 
+
+they are titled enterwanted.test.ts and wantedspecs.ts
