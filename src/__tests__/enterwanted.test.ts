@@ -1,8 +1,6 @@
 import { wantedspecs } from "./wantedspecs";
 const chromedriver = require("chromedriver");
-import { WebDriver, Builder, Capabilities,  WebElement, By } from "selenium-webdriver";
-import { headersToString } from "selenium-webdriver/http";
-import { Name } from "selenium-webdriver/lib/command";
+import { WebDriver, Builder, Capabilities, By } from "selenium-webdriver";
 const driver: WebDriver = new Builder()
   .withCapabilities(Capabilities.chrome())
   .build();
@@ -12,9 +10,11 @@ const submitButton: By = By.xpath("//*[@id= 'saveBtn']");
 const clearButton: By = By.xpath("//*[@id= 'clearBtn']");
 
 // Jira Test plan located here: https://dmutah.atlassian.net/browse/AB4DL-33
+//To execute this test use git bash command npx jest enterwanted.test.ts
 
 jest.setTimeout(500000)
 
+//This test fills out the required fields and looks for the results to contain the field text input to pass
 test("can enter only required fields and get expected result", async () => {
     await page.navigate();
     await page.enterheader("Not top priority");
